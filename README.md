@@ -1,4 +1,5 @@
 北京首钢什么时候能赢球？
+
 北京师范大学公选课 2020秋季学期“Python编程与数据分析”课程大作业 （教师：胡韧奋老师）
 
 基本功能与目标:
@@ -11,7 +12,8 @@
 张雨杉（2017级化学）
 吴文卓（2020级数学与应用数学）
 
-When Can Beijing Duck Wins
+When Can Beijing Duck Wins?
+
 Course Project for BNU 2020 fall "Python Programming and data analysis" (Tutor: Dr.Renfen Hu (Iris))
 
 Functions and Aims
