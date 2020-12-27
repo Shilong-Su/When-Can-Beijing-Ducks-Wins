@@ -8,9 +8,9 @@
 本项目可推广到其他CBA球队
 
 成员：
-苏世龙（2018级化学（励耘））
-张雨杉（2017级化学）
-吴文卓（2020级数学与应用数学）
+苏世龙（2018级化学（励耘））——负责数据预处理、数据分析、绘图
+张雨杉（2017级化学）——负责爬虫
+吴文卓（2020级数学与应用数学）——负责数据分析、参数调整
 
 When Can Beijing Duck Wins?
 
@@ -22,6 +22,6 @@ Wishes to know what is vital for Beijing Ducks to win a game，offering a data r
 Project Applicable for other CBA tesm
 
 Group Members:
-Shilong Su (Chemistry (Liyun Class), Class of 2018)
-Yushan Zhang (Chemistry, Class of 2017)
-Wenzhuo Wu (Mathematics and Applied Mathmatics, Class of 2020)
+Shilong Su (Chemistry (Liyun Class), Class of 2018), Tasks: Data Preprocessing, Data Analysis, Plotting
+Yushan Zhang (Chemistry, Class of 2017), Tasks:Crawlers
+Wenzhuo Wu (Mathematics and Applied Mathmatics, Class of 2020), Tasks: Data Analysis, Parameters Searching
