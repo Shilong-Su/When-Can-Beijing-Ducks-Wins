@@ -1,4 +1,5 @@
-##请进入master
+##请进入code下方“main”选择框，进入"master"，找到相关代码与文件
+##please change “main” and enter master for codes and related files
 
 北京首钢什么时候能赢球？
 
