@@ -20,6 +20,8 @@ Data Analysis.py——分析数据、作图所用代码
 张雨杉（2017级化学）——负责爬虫，数据预处理
 吴文卓（2020级数学与应用数学）——负责数据分析代码，数据分析计算、参数调整
 
+代码与相关数据地址：https://github.com/Shilong-Su/When-Can-Beijing-Ducks-Wins
+
 致谢：
 感谢胡韧奋老师、蒋彦廷师兄，闫真师兄的悉心帮助与答疑！
 
@@ -44,6 +46,8 @@ Group Members:
 Shilong Su (Chemistry (Liyun Class), Class of 2018), Tasks: Data Preprocessing, Data Analysis, Plotting
 Yushan Zhang (Chemistry, Class of 2017), Tasks:Crawlers, Data Preprocessing
 Wenzhuo Wu (Mathematics and Applied Mathmatics, Class of 2020), Tasks: Data Analysis, Parameters Searching, Threshold Calculation
+
+Links for this project: https://github.com/Shilong-Su/When-Can-Beijing-Ducks-Wins
 
 Acknowledgment：
 Great Thanks to Dr.Renfen Hu, Mr.Yanting Jiang and Mr Zhen Yan for their help！
