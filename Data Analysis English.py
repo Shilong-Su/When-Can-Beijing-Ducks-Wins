@@ -18,8 +18,8 @@ import pandas as pd
 import graphviz
 import pydotplus
 import os
-
-
+import re
+import xgboost
 
 
 
@@ -32,13 +32,13 @@ def plot_ROC(t,s):
 
 
 # 利用北京队和差值预测胜负
-df = pd.read_excel('opponent_info（已清洗最终版）.xlsx')
+df = pd.read_excel('opponent_info_English（已清洗最终版）.xlsx')
 #（差）数据与得分差
 # df.drop(columns=['主场/客场','队伍','2分（京）','3分（京）','罚球（京）','进攻篮板（京）','防守篮板（京）','助攻（京）','犯规（京）','抢断（京）','失误（京）','盖帽（京）','扣篮（京）','被侵（京）','快攻（京）','得分（京）','得分（差）','主场/客场.1','队伍.1','2分（对）','3分（对）','罚球（对）','进攻篮板（对）','防守篮板（对）','助攻（对）','犯规（对）','抢断（对）','失误（对）','盖帽（对）','扣篮（对）','被侵（对）','快攻（对)','得分（对）','时间','年','月','日','胜负','数字主场/客场','差值'],axis=1,inplace=True)
 #（京）数据与得分差
-df.drop(columns=['主场/客场','队伍','2分（差）','3分（差）','罚球（差）','进攻篮板（差）','防守篮板（差）','助攻（差）','犯规（差）','抢断（差）','失误（差）','盖帽（差）','扣篮（差）','被侵（差）','快攻（京）','得分（差）','得分（京）','主场/客场.1','队伍.1','2分（对）','3分（对）','罚球（对）','进攻篮板（对）','防守篮板（对）','助攻（对）','犯规（对）','抢断（对）','失误（对）','盖帽（对）','扣篮（对）','被侵（对）','快攻（对)','得分（对）','时间','年','月','日','胜负','数字主场/客场','差值'],axis=1,inplace=True)
-y = df['数字胜负']
-df.drop(labels=['数字胜负'],axis=1,inplace=True)
+df.drop(columns=['Host?','Team','2 points(Difference)','3 points(Difference)','Penalty(Difference)','Offensive rebounds(Difference)','Defensive rebounds(Difference)','Assists(Difference)','Foul(Difference)','Snatching(Difference)','Mistakes(Difference)','Cap(Difference)','Dunks(Difference)','Invasion(Difference)','Fast attack(Beijing)','Score(Difference)','Score(Beijing)','Host?.1','Team.1','2 points(Opponent)','3 points(Opponent)','Penalty(Opponent)','Offensive rebounds(Opponent)','Defensive rebounds(Opponent)','Assists(Opponent)','Foul(Opponent)','Snatching(Opponent)','Mistakes(Opponent)','Cap(Opponent)','Dunks(Opponent)','Invasion(Opponent)','Fast attack(Opponent)','Score(Opponent)','Time','Year','Month','Day','Win/Lose','Host(num)','Difference'],axis=1,inplace=True)
+y = df['W/L(num)']
+df.drop(labels=['W/L(num)'],axis=1,inplace=True)
 x = df
 x_train,x_test,y_train,y_test = train_test_split(x, y, random_state=10)
 
@@ -101,7 +101,7 @@ print('average_score:', average_score)
 # print(Model.coef_)
 # print(Model.intercept_)
 
-# 可能的树用法
+# # 可能的树用法
 # n_nodes = Model.tree_.node_count
 # children_left = Model.tree_.children_left
 # children_right = Model.tree_.children_right
@@ -143,15 +143,22 @@ print('average_score:', average_score)
 #                   feature=feature[i],
 #                   threshold=threshold[i],
 #                   right=children_right[i]))
-
-#决策树方法graphviz画图
+#
+# # 决策树方法graphviz画图
 # dot_data = tree.export_graphviz(Model, out_file=None, feature_names=df.columns.values)
 # graph = graphviz.Source(dot_data)
 # graph.view()
 
+
 #XGB画图
-plot_tree(Model)
+# plot_tree(Model)
+fig,ax = plt.subplots(figsize=(100,100))
+plot_tree(Model,
+          height=0.5,
+          ax=ax)
 plt.show()
+
+
 
 
 
