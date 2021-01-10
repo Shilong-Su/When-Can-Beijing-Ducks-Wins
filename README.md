@@ -60,5 +60,5 @@ Wenzhuo Wu (Mathematics and Applied Mathmatics, Class of 2020), Tasks: Data Anal
 Links for this project: https://github.com/Shilong-Su/When-Can-Beijing-Ducks-Wins
 
 Acknowledgment：<br/>
-Great Thanks to Dr.Renfen Hu, Mr.Yanting Jiang and Mr Zhen Yan for their help！
+Great Thanks to Dr.Renfen Hu, Mr.Yanting Jiang and Mr.Zhen Yan for their help！
 
